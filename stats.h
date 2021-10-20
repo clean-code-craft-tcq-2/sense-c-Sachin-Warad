@@ -3,7 +3,7 @@ struct Stats
   float average;
   float minimum;
   float maximum;
-}
+};
 struct Stats compute_statistics(const float* numberset, int setlength);
 
 typedef void (*alerter_funcptr)();
