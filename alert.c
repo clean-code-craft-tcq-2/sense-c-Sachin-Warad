@@ -2,7 +2,7 @@
 #include "alert.h"
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats){
-  if(max > computedStats.max){
+  if(computedStats.max > maxThreshold){
       emailAlerter();
       ledAlerter();
   }
@@ -12,6 +12,6 @@ void emailAlerter(void){
     emailAlertCallCount = 1;
 }
 
-void ledAlerted(void){
+void ledAlerter(void){
     ledAlertCallCount = 1;
 }
